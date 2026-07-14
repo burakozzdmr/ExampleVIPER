@@ -11,7 +11,7 @@ import Foundation
 
 protocol NetworkManagerProtocol: AnyObject {
     func sendRequest<T: Decodable>(
-        request: URLRequest,
+        request: BaseRequest,
         type: T.Type,
         completion: @escaping (Result<T, NetworkError>) -> Void
     )
@@ -31,12 +31,18 @@ class NetworkManager {
 
 extension NetworkManager: NetworkManagerProtocol {
     func sendRequest<T: Decodable>(
-        request: URLRequest,
+        request: BaseRequest,
         type: T.Type,
         completion: @escaping (Result<T, NetworkError>) -> Void
     ) {
-        session.dataTask(with: request) { data, _, error in
-            if let error = error {
+        guard let requestStringURL = URL(string: request.fullEndpoint) else {
+            return completion(.failure(.invalidURL))
+        }
+        
+        let requestURL: URLRequest = .init(url: requestStringURL)
+        
+        session.dataTask(with: requestURL) { data, _, error in
+            if error != nil {
                 return completion(.failure(.invalidURL))
             }
             
