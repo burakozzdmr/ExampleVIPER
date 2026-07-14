@@ -6,7 +6,66 @@
 //
 
 import Foundation
-
-class ProductResponse {
-    
+ 
+// MARK: - Root Response
+ 
+struct ProductResponse: Decodable {
+    let products: [Product]
+    let total: Int
+    let skip: Int
+    let limit: Int
+}
+ 
+// MARK: - Product
+ 
+struct Product: Decodable {
+    let id: Int
+    let title: String
+    let description: String
+    let category: String
+    let price: Double
+    let discountPercentage: Double
+    let rating: Double
+    let stock: Int
+    let tags: [String]
+    let brand: String?
+    let sku: String
+    let weight: Int
+    let dimensions: Dimensions
+    let warrantyInformation: String
+    let shippingInformation: String
+    let availabilityStatus: String
+    let reviews: [Review]
+    let returnPolicy: String
+    let minimumOrderQuantity: Int
+    let meta: Meta
+    let images: [String]
+    let thumbnail: String
+}
+ 
+// MARK: - Dimensions
+ 
+struct Dimensions: Decodable {
+    let width: Double
+    let height: Double
+    let depth: Double
+}
+ 
+// MARK: - Review
+ 
+struct Review: Decodable {
+    let rating: Int
+    let comment: String
+    let date: String
+    let reviewerName: String
+    let reviewerEmail: String
+}
+ 
+// MARK: - Meta
+ 
+struct Meta: Decodable {
+    let createdAt: String
+    let updatedAt: String
+    let barcode: String
+    let qrCode: String
 }

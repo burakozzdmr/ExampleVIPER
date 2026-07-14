@@ -8,5 +8,5 @@
 import Foundation
 
 class PostRequest: BaseRequest {
-    
+    override var path: String { NetworkConstants.EndpointPath.postPath }
 }

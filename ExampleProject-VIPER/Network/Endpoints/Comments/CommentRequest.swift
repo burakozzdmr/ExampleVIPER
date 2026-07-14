@@ -8,5 +8,5 @@
 import Foundation
 
 class CommentRequest: BaseRequest {
-    
+    override var path: String { NetworkConstants.EndpointPath.commentPath }
 }

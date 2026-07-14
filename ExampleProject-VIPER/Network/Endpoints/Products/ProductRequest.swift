@@ -8,5 +8,5 @@
 import Foundation
 
 class ProductRequest: BaseRequest {
-    
+    override var path: String { NetworkConstants.EndpointPath.productsPath }
 }
