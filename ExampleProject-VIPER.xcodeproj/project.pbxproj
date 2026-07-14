@@ -14,7 +14,7 @@
 		08F649D13006599B005AF9C5 /* Exceptions for "ExampleProject-VIPER" folder in "ExampleProject-VIPER" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
+				Resources/Info.plist,
 			);
 			target = 08F649BE3006599A005AF9C5 /* ExampleProject-VIPER */;
 		};
@@ -137,12 +137,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 63M84ZY82B;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "ExampleProject-VIPER/Info.plist";
+				INFOPLIST_FILE = "ExampleProject-VIPER/Resources/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = VIPER;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
@@ -176,12 +176,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 63M84ZY82B;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "ExampleProject-VIPER/Info.plist";
+				INFOPLIST_FILE = "ExampleProject-VIPER/Resources/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = VIPER;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
