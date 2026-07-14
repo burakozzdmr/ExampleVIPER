@@ -9,29 +9,23 @@ import Foundation
 
 enum NetworkError: Error {
     case invalidURL
-    case requestTimeOut
     case invalidResponse
-    case serverError
-    case noInternet
     case decodingError
     case noData
-    
+    case generalError(Error)
+
     var errorMessage: String {
         switch self {
         case .invalidURL:
-            "Invalid URL"
-        case .requestTimeOut:
-            "Request timeout"
+            return "Geçersiz URL. Lütfen tekrar deneyin."
         case .invalidResponse:
-            "Invalid response"
-        case .serverError:
-            "Server error"
-        case .noInternet:
-            "No internet connection"
+            return "Sunucudan geçersiz bir yanıt alındı."
         case .decodingError:
-            "Decoding error"
+            return "Veri işlenirken bir hata oluştu."
         case .noData:
-            "No data"
+            return "Sunucudan herhangi bir veri alınamadı."
+        case .generalError(let error):
+            return "Bir hata oluştu: \(error.localizedDescription)"
         }
     }
 }

@@ -36,7 +36,7 @@ extension NetworkManager: NetworkManagerProtocol {
         completion: @escaping (Result<T, NetworkError>) -> Void
     ) {
         session.dataTask(with: request) { data, _, error in
-            guard let error = error else {
+            if let error = error {
                 return completion(.failure(.invalidURL))
             }
             
