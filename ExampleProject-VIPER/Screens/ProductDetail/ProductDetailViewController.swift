@@ -220,7 +220,7 @@ final class ProductDetailViewController: UIViewController {
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        reviewsTableViewHeightConstraint?.updateOffset(reviewsTableView.contentSize.height)
+        reviewsTableViewHeightConstraint?.updateOffset(amount: reviewsTableView.contentSize.height)
     }
 
     // MARK: - Inits
